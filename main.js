@@ -134,6 +134,7 @@ function displayCart() {
     cart = parseInt(cart);
 
     let productContainer = document.querySelector('.products');
+    let totalContainer = document.querySelector('.products-total');
     
     if( cartItems && productContainer ) {
         productContainer.innerHTML = '';
@@ -153,10 +154,9 @@ function displayCart() {
             <div class="total">&#8364 ${item.inCart * item.price},00</div>`;
         });
 
-        productContainer.innerHTML += `
+        totalContainer.innerHTML += `
             <div class="basketTotalContainer">
-                <h4 class="basketTotalTitle">Totaal</h4>
-                <h4 class="basketTotal">&#8364 ${cart},00</h4>
+                <p class="basketTotal">&#8364 ${cart},00</p>
             </div>`
 
         deleteButtons();
