@@ -135,29 +135,54 @@ function displayCart() {
 
     let productContainer = document.querySelector('.products');
     let totalContainer = document.querySelector('.products-total');
+    let totalShipping = document.querySelector('.shipping-cost');
+    let totalPay = document.querySelector('.total-pay');
     
     if( cartItems && productContainer ) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += 
-            `<div class="product"><ion-icon name="close-circle"></ion-icon>
+            `<!-- Product Image -->
+            <div class="product col-lg-3 col-md-12 mb-4 mb-lg-0">
 			
-				<img src="./images/${item.tag}.jpg" /><br><br>
-                <span class="sm-hide">${item.name}</span>
+				<img src="./images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
+                
             </div>
-            <div class="price sm-hide">&#8364 ${item.price},00</div>
-            <div class="quantity">
-                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    <span>${item.inCart}</span>
-                <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+            <!-- Product Info -->
+            <div class="product col-lg-4 col-md-6 mb-4 mb-lg-0 mx-lg-2">
+                <span class="sm-hide"><strong>${item.name}</strong></span>
+                <span class="sm-hide">1 piece = &#8364 ${item.price},00</span><br>
+                <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                    <i class="fas fa-trash"></i>
+                </button>
             </div>
-            <div class="total">&#8364 ${item.inCart * item.price},00</div>`;
+            <div class="lg-hide"></div>
+            <!-- Product Quantity and Price-->
+            <div class="quantity col-lg-5 col-md-6 mb-4 mb-lg-0">
+                
+                <button class="btn btn-primary px-3 me-2 decrease">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="mx-2">${item.inCart}</span>
+                <button class="btn btn-primary px-3 ms-2 increase">
+                    <i class="fas fa-plus"></i>
+                </button><br>
+                <span class="text-start text-md-center mt-3"><strong>&#8364 ${item.inCart * item.price},00</strong></span>
+            </div>`;
         });
 
-        totalContainer.innerHTML += `
-            <div class="basketTotalContainer">
-                <p class="basketTotal">&#8364 ${cart},00</p>
-            </div>`
+        totalContainer.innerHTML = '';
+        totalContainer.innerHTML += `<p class="basketTotal">&#8364 ${cart},00</p>`;
+
+        if( cart < 75 ){
+            totalShipping.innerHTML =`<p>€ 20,00</p>`;
+            let totalPayAmount = cart + 20;
+            totalPay.innerHTML = `<p><strong>€ ${totalPayAmount},00</strong></p>`;
+        } else {
+            totalShipping.innerHTML =`<p>Free</p>`;
+            let totalPayAmount = cart;
+            totalPay.innerHTML = `<p><strong>€ ${totalPayAmount},00</strong></p>`;
+        }
 
         deleteButtons();
         manageQuantity();
@@ -206,7 +231,7 @@ function manageQuantity() {
 }
 
 function deleteButtons() {
-    let deleteButtons = document.querySelectorAll('.product ion-icon');
+    let deleteButtons = document.querySelectorAll('.product button');
     let productNumbers = localStorage.getItem('cartNumbers');
     let cartCost = localStorage.getItem("totalCost");
     let cartItems = localStorage.getItem('productsInCart');
