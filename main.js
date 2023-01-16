@@ -143,22 +143,24 @@ function displayCart() {
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += 
             `<!-- Product Image -->
-            <div class="product col-lg-3 col-md-2 mb-4 mb-lg-0 mx-md-2">
+            <div class="product col-lg-3 col-2 mb-4 mb-lg-0 mx-sm-2">
 			
 				<img src="./images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
                 
             </div>
             <!-- Product Info -->
-            <div class="product col-lg-4 col-md-4 mb-4 mb-lg-0 mx-lg-2 mx-md-2">
-                <span class="sm-hide"><strong>${item.name}</strong></span>
-                <span class="sm-hide">1 piece = &#8364 ${item.price},00</span><br>
+            <div class="product col-4 mb-4 mb-lg-0 mx-2">
+                <span><strong>${item.name}</strong></span>
+                <span class="d-none d-sm-block">1 piece = &#8364 ${item.price},00</span><br class="d-none d-sm-block">
+                <span class="d-block d-sm-none my-0">1 piece =</span>
+                <span class="d-block d-sm-none">&#8364 ${item.price},00</span><br>
                 <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
             <div class="lg-hide"></div>
             <!-- Product Quantity and Price-->
-            <div class="quantity col-lg-5 col-md-6 mb-4 mb-lg-0">
+            <div class="quantity col-lg-5 col-6 mb-4 mb-lg-0">
                 
                 <button class="btn btn-primary px-3 me-2 decrease">
                     <i class="fas fa-minus"></i>

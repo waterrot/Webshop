@@ -187,9 +187,15 @@ li a {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
     .quantity {
       width: 35% !important;
+    }
+  }
+
+  @media only screen and (max-width: 575.98px) {
+    .quantity {
+      width: 45% !important;
     }
   }
 
