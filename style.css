@@ -186,6 +186,13 @@ li a {
     align-items: center;
 }
 
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .quantity {
+      width: 35% !important;
+    }
+  }
+
 .quantity {
     width: 25%;
     border-bottom: 1px solid lightgray;
