@@ -130,14 +130,13 @@ function displayCart() {
     // declare variables
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-
     let cart = localStorage.getItem("totalCost");
     cart = parseInt(cart);
 
     let productContainer = document.querySelector('.products');
     let totalContainer = document.querySelector('.products-total');
-    let payContainer = document.querySelector('.pay-page');
     
+    // code to display the products on the cart page
     if( cartItems && productContainer ) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
@@ -183,6 +182,18 @@ function displayCart() {
         manageQuantity();
         displayFutureDays();
     }
+}
+
+function displayPay() {
+    // declare variables
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    let cart = localStorage.getItem("totalCost");
+    cart = parseInt(cart);
+
+    let payContainer = document.querySelector('.pay-page');
+    
+    // code to display the products on the payment page
     if( cartItems && payContainer ) {
         payContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
@@ -330,3 +341,4 @@ function displayFutureDays() {
 
 onLoadCartNumbers();
 displayCart();
+displayPay();

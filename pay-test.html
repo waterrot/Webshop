@@ -79,22 +79,94 @@
                     </div>
                 </div>
                 <!--SHIPPING METHOD END-->
-              </div>
-              <div class="card mb-4 mb-lg-0">
+            </div>
+            <!--CREDIT CART PAYMENT-->
+            <div class="card mb-4 mb-lg-0">
+                <div class="card-header py-3">
+                    <h5 class="mb-0">Payment - Credit Card</h5>
+                </div>
                 <div class="card-body">
-                  <p><strong>We accept:</strong></p>
-                  <img class="me-2" width="45px"
-                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                    alt="Visa" />
-                  <img class="me-2" width="45px"
-                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                    alt="American Express" />
-                  <img class="me-2" width="45px"
-                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                    alt="Mastercard" />
-                  <img class="me-2" width="45px"
-                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.webp"
-                    alt="PayPal acceptance mark" />
+                    <div class="form-group mb-2">
+                        <div class="col-md-6"><strong>Card Type:</strong></div>
+                        <div class="col-md-6">
+                            <select id="CreditCardType" name="CreditCardType" class="form-control">
+                                <option value="5">Visa</option>
+                                <option value="6">MasterCard</option>
+                                <option value="7">American Express</option>
+                                <option value="8">Discover</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="col-md-6"><strong>Credit Card Number:</strong></div>
+                        <div class="col-md-6"><input type="text" class="form-control" name="car_number" value="" /></div>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="col-md-6"><strong>Card CVV:</strong></div>
+                        <div class="col-md-6"><input type="text" class="form-control" name="car_code" value="" /></div>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="col-md-12">
+                            <strong>Expiration Date</strong>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                                <select class="form-control" name="">
+                                    <option value="">Month</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                                <select class="form-control" name="">
+                                    <option value="">Year</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="col-md-12">
+                            <span>Pay secure using your credit card.</span>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                alt="Visa" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                alt="American Express" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                alt="Mastercard" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <button type="submit" class="btn btn-primary btn-submit-fix">Place Order</button>
+                        </div>
+                    </div>
+                    <!--CREDIT CART PAYMENT END-->
                 </div>
               </div>
             </div>
@@ -118,47 +190,14 @@
                         <!-- Total price -->
                         <div class="product col-1 mb-4 mb-lg-0 mx-sm-2 border-0"></div>
                         <div class="product col-7 mb-4 mb-lg-0 mx-2 mt-2 py-0 border-0">
-                            <p><strong>Total Amount (incl. VAT)</strong></p>
+                            <p><strong>Total Amount (incl. VAT):</strong></p>
                         </div>
                         <div class="quantity col-4 mb-4 mb-lg-0 mt-2 px-0 pb-0 border-0">
                             <span class="total-pay"></span>
                         </div>
                       </div>
                     </div>
-                  </div>
-              <div class="card mb-4">
-                <div class="card-header py-3">
-                  <h5 class="mb-0">Summary</h5>
                 </div>
-                <div class="card-body">
-                  <ul class="list-group list-group-flush">
-                    <li
-                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                      Products
-                      <span class="products-total basketTotalContainer">
-                      </span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                      Shipping
-                      <span class="shipping-cost"></span>
-                    </li>
-                    <li
-                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                      <div>
-                        <strong>Total amount</strong>
-                        <strong>
-                          <p class="mb-0">(including VAT)</p>
-                        </strong>
-                      </div>
-                      <span class="total-pay"></span>
-                    </li>
-                  </ul>
-      
-                  <button type="button" class="btn btn-primary btn-lg btn-block">
-                    Go to checkout
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
