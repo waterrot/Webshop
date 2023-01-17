@@ -286,4 +286,21 @@ li a {
     }
 }
 
-
+/* payment page */
+.pay-page {
+    width: 100%;
+    display:contents;
+    flex-wrap:nowrap;
+	 
+}
+.pay-page {
+    width: 100%;
+    display:contents;
+    flex-wrap:nowrap;
+	 
+}
+.pay-page img {
+    width: 65px;
+	padding-right: 4px;
+	align-content: start;
+}
