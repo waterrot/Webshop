@@ -188,6 +188,7 @@ function displayCart() {
 
         deleteButtons();
         manageQuantity();
+        displayFutureDays();
     }
 }
 
@@ -257,6 +258,41 @@ function deleteButtons() {
     }
 }
 
+// function to show delivery range of 2 till 7 days
+function displayFutureDays() {
+    let shippingDate = document.querySelector('.shipping-date');
+    
+    var today = new Date();
+    var twoDays = new Date(today);
+    twoDays.setDate(today.getDate() + 2);
+    var dd2 = twoDays.getDate();
+    var mm2 = twoDays.getMonth() + 1;
+    var yyyy2 = twoDays.getFullYear();
+  
+    var sevenDays = new Date(today);
+    sevenDays.setDate(today.getDate() + 7);
+    var dd7 = sevenDays.getDate();
+    var mm7 = sevenDays.getMonth() + 1;
+    var yyyy7 = sevenDays.getFullYear();
+  
+    if (dd2 < 10) {
+      dd2 = '0' + dd2;
+    }
+    if (mm2 < 10) {
+      mm2 = '0' + mm2;
+    }
+    
+    if (dd7 < 10) {
+      dd7 = '0' + dd7;
+    }
+    if (mm7 < 10) {
+      mm7 = '0' + mm7;
+    }
+
+    shippingDate.innerHTML = '';
+    shippingDate.innerHTML = dd2 + '/' + mm2 + '/' + yyyy2 + ' - ' + dd7 + '/' + mm7 + '/' + yyyy7;
+}
+  
 
 onLoadCartNumbers();
 displayCart();
