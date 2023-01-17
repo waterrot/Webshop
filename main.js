@@ -127,6 +127,7 @@ function totalCost( product, action ) {
 }
 
 function displayCart() {
+    // declare variables
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 
@@ -137,10 +138,12 @@ function displayCart() {
     let totalContainer = document.querySelector('.products-total');
     let totalShipping = document.querySelector('.shipping-cost');
     let totalPay = document.querySelector('.total-pay');
+    let payContainer = document.querySelector('.pay-page');
     
     if( cartItems && productContainer ) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
+            // display the products with the details
             productContainer.innerHTML += 
             `<!-- Product Image -->
             <div class="product col-lg-3 col-2 mb-4 mb-lg-0 mx-sm-2">
@@ -173,9 +176,11 @@ function displayCart() {
             </div>`;
         });
 
+        // display the cart total
         totalContainer.innerHTML = '';
         totalContainer.innerHTML += `<p class="basketTotal">&#8364 ${cart},00</p>`;
 
+        // if statement to decide if customer has to pay for shipping
         if( cart < 75 ){
             totalShipping.innerHTML =`<p>€ 20,00</p>`;
             let totalPayAmount = cart + 20;
@@ -186,10 +191,37 @@ function displayCart() {
             totalPay.innerHTML = `<p><strong>€ ${totalPayAmount},00</strong></p>`;
         }
 
+        
         deleteButtons();
         manageQuantity();
         displayFutureDays();
     }
+    if( cartItems && payContainer ) {
+        payContainer.innerHTML = '';
+        Object.values(cartItems).map( (item, index) => {
+            payContainer.innerHTML += 
+                `<!-- Product Image -->
+                <div class="product col-2 mb-4 mb-lg-0 mx-sm-2">
+                
+                    <img src="./images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
+                    
+                </div>
+                <!-- Product Info -->
+                <div class="product col-6 mb-4 mb-lg-0 mx-2">
+                    <span><strong>${item.name}</strong></span>
+                    <span class="d-none d-sm-block">1 piece = &#8364 ${item.price},00</span><br class="d-none d-sm-block">
+                    <span class="d-block d-sm-none my-0">1 piece =</span>
+                    <span class="d-block d-sm-none">&#8364 ${item.price},00</span><br>
+                    <span class="mx-2">${item.inCart}</span>
+                </div>
+                <div class="lg-hide"></div>
+                <!-- Product Quantity and Price-->
+                <div class="quantity col-4 mb-4 mb-lg-0">
+                    
+                    <br>
+                    <span class="text-start text-md-center mt-3"><strong>&#8364 ${item.inCart * item.price},00</strong></span>
+                </div>`;
+        })}
 }
 
 function manageQuantity() {
