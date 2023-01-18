@@ -89,7 +89,7 @@
                     <div class="form-group mb-2">
                         <div class="col-md-6"><strong>Card Type:</strong></div>
                         <div class="col-md-6">
-                            <select id="CreditCardType" name="CreditCardType" class="form-control">
+                            <select id="CreditCardType" name="CreditCardType" class="form-control form-select">
                                 <option value="5">Visa</option>
                                 <option value="6">MasterCard</option>
                                 <option value="7">American Express</option>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="d-flex flex-wrap">
                             <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <select class="form-control" name="">
+                                <select class="form-control form-select" name="">
                                     <option value="">Month</option>
                                     <option value="01">01</option>
                                     <option value="02">02</option>
@@ -128,7 +128,7 @@
                                 </select>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <select class="form-control" name="">
+                                <select class="form-control form-select" name="">
                                     <option value="">Year</option>
                                     <option value="2015">2015</option>
                                     <option value="2016">2016</option>
@@ -170,7 +170,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 order-first order-md-last">
                 <div class="card mb-4">
                     <div class="card-header py-3">
                       <h5 class="mb-0">Cart - Items</h5>
@@ -180,19 +180,19 @@
                       <div class="row">
                         <div class="pay-page"></div>
                         <!-- Total shipping -->
-                        <div class="product col-1 mb-0 mx-2 mt-2 py-0 border-0"></div>
+                        <div class="product col-1 mb-0 mx-0 mx-md-2 mt-2 py-0 border-0"></div>
                         <div class="product col-7 mb-0 mx-2 mt-2 py-0 border-0">
                             <p class="mb-0"><strong>Shipping:</strong></p>
                         </div>
-                        <div class="quantity col-4 mb-0 mt-2 px-0 py-0 border-0">
+                        <div class="quantity quantity-pay col-4 mb-0 mt-2 px-0 py-0 border-0">
                             <span class="shipping-cost"></span>
                         </div>
                         <!-- Total price -->
-                        <div class="product col-1 mb-4 mb-lg-0 mx-sm-2 border-0"></div>
+                        <div class="product col-1 mb-4 mb-lg-0 mx-0 mx-md-2 border-0"></div>
                         <div class="product col-7 mb-4 mb-lg-0 mx-2 mt-2 py-0 border-0">
                             <p><strong>Total Amount (incl. VAT):</strong></p>
                         </div>
-                        <div class="quantity col-4 mb-4 mb-lg-0 mt-2 px-0 pb-0 border-0">
+                        <div class="quantity quantity-pay col-4 mb-4 mb-lg-0 mt-2 px-0 pb-0 border-0">
                             <span class="total-pay"></span>
                         </div>
                       </div>

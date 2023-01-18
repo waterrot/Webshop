@@ -209,7 +209,7 @@ function displayPay() {
                 </div>
                 <div class="lg-hide"></div>
                 <!-- Product Quantity and Price-->
-                <div class="quantity col-4 mb-4 mb-lg-0 mt-0">
+                <div class="quantity quantity-pay col-4 mb-4 mb-lg-0 mt-0">
                     <span class="text-start text-md-center mt-3"><strong>&#8364 ${item.inCart * item.price},00</strong></span>
                 </div>`;
         })
