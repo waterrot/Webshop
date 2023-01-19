@@ -43,3 +43,8 @@ We continually tweak and adjust this template to help give you the best experien
 --------
 
 Happy coding!
+
+
+https://startbootstrap.com/template/shop-homepage
+
+https://mdbootstrap.com/docs/standard/extended/shopping-carts/?#!
