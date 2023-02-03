@@ -2,50 +2,28 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [ 
     {
-        name: "Docent zonder haar",
-        tag: "docentzonderhaar",
+        name: "Zeehondknuffel lief",
+        tag: "zeehond1",
         price: 15,
         inCart: 0
     },
     {
-        name: "Docent met haar 1",
-        tag: "docentmethaar1",
+        name: "Zeehondknuffel schattig",
+        tag: "zeehond2",
         price: 20,
         inCart: 0
     },
     {
-        name: "Docent met haar 2",
-        tag: "docentmethaar2",
+        name: "Zeehondknuffel stil",
+        tag: "zeehond3",
         price: 20,
         inCart: 0
     },
     {
-        name: "Studiepunten",
-        tag: "studiepunten",
-        price: 100,
+        name: "zeehondknuffel rond",
+        tag: "zeehond4",
+        price: 50,
         inCart: 0
-    },
-	    {
-        name: "Minnaert gebouw",
-        tag: "minnaertgebouw",
-        price: 40000,
-        inCart: 0
-    },
-	    {
-        name: "Academie gebouw",
-        tag: "academiegebouw",
-        price: 60000,
-        inCart: 0
-    },
-	{
-        name: "Bachelor diploma",
-        tag: "bachelordiploma",
-        price: 10000
-    },
-	{
-        name: "Docent met haar 3",
-        tag: "docentmethaar3",
-        price: 400
     }
 ];
 
@@ -145,14 +123,14 @@ function displayCart() {
             `<!-- Product Image -->
             <div class="product col-lg-3 col-2 mb-4 mb-lg-0 mx-sm-2">
 			
-				<img src="./assets/images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
+				<img src="./assets/images/${item.tag}.jpeg" class="px-lg-1 w-100 rounded" /><br><br>
                 
             </div>
             <!-- Product Info -->
             <div class="product col-4 mb-4 mb-lg-0 mx-2">
                 <span><strong>${item.name}</strong></span>
                 <span class="d-none d-sm-block">1 piece = &#8364 ${item.price},00</span><br class="d-none d-sm-block">
-                <span class="d-block d-sm-none my-0">1 piece =</span>
+                <span class="d-block d-sm-none my-0">1 stuk =</span>
                 <span class="d-block d-sm-none">&#8364 ${item.price},00</span><br>
                 <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
                     <i class="fas fa-trash"></i>
@@ -200,7 +178,7 @@ function displayPay() {
             payContainer.innerHTML += 
                 `<!-- Product Image -->
                 <div class="product col-1 mb-4 mb-lg-0 mx-sm-2">
-                    <img src="./assets/images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" />
+                    <img src="./assets/images/${item.tag}.jpeg" class="px-lg-1 w-100 rounded" />
                 </div>
                 <!-- Product Info -->
                 <div class="product col-7 mb-4 mb-lg-0 mx-2">

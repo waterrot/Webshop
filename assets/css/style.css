@@ -113,41 +113,6 @@ li a {
 }
 
 
-.add-cart {
-    position: absolute;
-	margin-right: 20px;
-    margin-left: 20px;
-    width: 140px;
-    background-color: darkgrey;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-	color: white;
-    cursor: pointer;
-    text-align: center;
-	text-decoration: none;
-	vertical-align: baseline;
-	border-radius: 9px;
-}
-
-.image .cart1,
-.image .cart2,
-.image .cart3,
-.image .cart4,
-.image .cart5,
-.image .cart6,
-.image .cart7,
-.image .cart8
-
-{
-    position: absolute;
-	vertical-align: baseline;
-	top: auto;
-	bottom: 0px;
-    opacity: 1;
-    padding: 4px;
-    text-decoration: none;
-}
-
 /* ----------------- CART PAGE --------------- */
 
 .container-products {
