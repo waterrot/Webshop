@@ -145,7 +145,7 @@ function displayCart() {
             `<!-- Product Image -->
             <div class="product col-lg-3 col-2 mb-4 mb-lg-0 mx-sm-2">
 			
-				<img src="./images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
+				<img src="./assets/images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" /><br><br>
                 
             </div>
             <!-- Product Info -->
@@ -200,7 +200,7 @@ function displayPay() {
             payContainer.innerHTML += 
                 `<!-- Product Image -->
                 <div class="product col-1 mb-4 mb-lg-0 mx-sm-2">
-                    <img src="./images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" />
+                    <img src="./assets/images/${item.tag}.jpg" class="px-lg-1 w-100 rounded" />
                 </div>
                 <!-- Product Info -->
                 <div class="product col-7 mb-4 mb-lg-0 mx-2">
